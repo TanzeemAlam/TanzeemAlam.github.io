@@ -1,0 +1,136 @@
+/* ── HEADER ── */
+.header {
+  background: var(--black); border-bottom: var(--border);
+  padding: 2.5rem 6%;
+}
+.headerInner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; }
+.back {
+  font-family: var(--font-mono); font-size: .68rem; color: rgba(255,255,255,.6);
+  text-decoration: none; text-transform: uppercase; letter-spacing: .08em;
+}
+.back:hover { color: var(--yellow); }
+
+.headerMeta { display: flex; flex-direction: column; gap: .5rem; }
+.title  { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); color: var(--yellow); letter-spacing: .03em; line-height: 1; }
+.subtitle { font-size: .78rem; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .05em; }
+.tags { display: flex; flex-wrap: wrap; gap: .3rem; }
+
+.headerActions { display: flex; align-items: center; gap: 1rem; }
+.statusBadge { font-family: var(--font-mono); font-size: .62rem; padding: .2rem .6rem; border: 2px solid #16a34a; color: #16a34a; }
+
+/* ── TAB BAR ── */
+.tabBar { background: var(--white); border-bottom: var(--border); position: sticky; top: 58px; z-index: 10; }
+.tabInner { max-width: 1100px; margin: 0 auto; padding: 0 6%; display: flex; gap: 0; }
+.tab {
+  font-family: var(--font-mono); font-size: .7rem; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
+  padding: 1rem 1.4rem; background: none; border: none;
+  border-bottom: 3px solid transparent; cursor: pointer;
+  color: var(--muted); transition: color .15s, border-color .15s;
+}
+.tab:hover { color: var(--black); }
+.tabActive { color: var(--black); border-bottom-color: var(--yellow); }
+
+/* ── CONTENT ── */
+.content { background: var(--white); min-height: 60vh; }
+.contentInner { max-width: 1100px; margin: 0 auto; }
+.tabIntro { font-size: .9rem; line-height: 1.8; color: var(--muted); margin-bottom: 2rem; max-width: 700px; }
+
+/* ── HLD VIEWER ── */
+.hldWrap { width: 100%; }
+.hldTop  { display: grid; grid-template-columns: 1fr 320px; gap: 1.4rem; align-items: start; }
+
+.hldDiagram { position: relative; border: var(--border); box-shadow: var(--shadow); overflow: hidden; }
+.hldImg { width: 100%; display: block; }
+.hldOverlay { position: absolute; inset: 0; }
+
+.hldNode {
+  position: absolute; transform: translate(-50%, -50%);
+  font-family: var(--font-mono); font-size: .58rem; font-weight: 700;
+  padding: .3rem .55rem; background: rgba(255,255,255,.92);
+  border: 2px solid var(--black); cursor: pointer;
+  white-space: nowrap; letter-spacing: .04em; text-transform: uppercase;
+  transition: transform .15s, background .15s, border-color .15s, box-shadow .15s;
+}
+.hldNode:hover {
+  background: var(--yellow); transform: translate(-50%,-50%) scale(1.1);
+  box-shadow: 3px 3px 0 var(--black);
+}
+.hldNodeActive {
+  background: var(--node-color, var(--yellow));
+  border-color: var(--black);
+  box-shadow: 3px 3px 0 var(--black);
+  transform: translate(-50%,-50%) scale(1.1);
+}
+
+.hldPanel {
+  border: 2.5px solid; overflow: hidden;
+  position: sticky; top: 110px;
+}
+.hldPanelHeader {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .7rem 1rem; font-family: var(--font-display);
+  font-size: .95rem; letter-spacing: .04em; color: var(--black);
+  border-bottom: var(--border);
+}
+.hldClose { background: none; border: none; cursor: pointer; font-size: .8rem; font-weight: 700; }
+.hldDesc { padding: 1.2rem; font-size: .82rem; line-height: 1.75; color: var(--text); }
+
+.hldHint {
+  border: 2px dashed var(--grey2); padding: 2rem;
+  text-align: center; display: flex; flex-direction: column;
+  align-items: center; gap: .8rem;
+}
+.hldHint span { font-size: 2rem; }
+.hldHint p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+
+/* ── CASE STUDY ── */
+.caseStudy { display: flex; flex-direction: column; gap: 2rem; max-width: 800px; }
+.caseLabel { font-family: var(--font-mono); font-size: .65rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .5rem; }
+.problem { background: var(--grey); border: var(--border); padding: 1.4rem; }
+.problem p { font-size: .88rem; line-height: 1.8; color: var(--text); }
+
+.decision {
+  border: var(--border); margin-bottom: .6rem;
+  box-shadow: var(--shadow); background: var(--white);
+}
+.decisionTitle {
+  padding: 1rem 1.3rem; font-size: .85rem; font-weight: 700;
+  cursor: pointer; list-style: none;
+  display: flex; justify-content: space-between;
+}
+.decisionTitle::after { content: '▼'; font-size: .7rem; color: var(--muted); }
+.decision[open] .decisionTitle::after { content: '▲'; }
+.decisionBody { padding: 0 1.3rem 1.2rem; font-size: .84rem; line-height: 1.75; color: var(--muted); border-top: 2px dashed var(--grey2); padding-top: 1rem; }
+
+.outcomes { background: var(--black); padding: 2rem; }
+.outcomes .caseLabel { color: rgba(255,255,255,.6); }
+.metricsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.metric { text-align: center; }
+.metricNum { font-family: var(--font-display); font-size: 2.5rem; color: var(--yellow); }
+.metricLabel { font-family: var(--font-mono); font-size: .62rem; color: rgba(255,255,255,.55); text-transform: uppercase; letter-spacing: .06em; margin-top: .2rem; }
+
+/* ── CODE SNIPPETS ── */
+.snippetList { display: flex; flex-direction: column; gap: 1.4rem; }
+.snippet { border: var(--border); box-shadow: var(--shadow); overflow: hidden; }
+.snippetHeader {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 1rem 1.3rem; background: var(--grey); border-bottom: var(--border); gap: 1rem;
+}
+.snippetTitle { font-family: var(--font-mono); font-size: .75rem; font-weight: 700; color: var(--black); }
+.snippetDesc  { font-size: .78rem; color: var(--muted); margin-top: .25rem; line-height: 1.5; }
+.copyBtn {
+  font-family: var(--font-mono); font-size: .62rem; font-weight: 700;
+  padding: .3rem .7rem; border: var(--border); background: var(--white);
+  cursor: pointer; white-space: nowrap; transition: background .12s;
+  flex-shrink: 0;
+}
+.copyBtn:hover { background: var(--yellow); }
+
+/* ── MISC ── */
+.notFound { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+
+@media(max-width: 900px) {
+  .hldTop { grid-template-columns: 1fr; }
+  .metricsGrid { grid-template-columns: repeat(2, 1fr); }
+}

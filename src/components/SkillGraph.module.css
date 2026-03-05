@@ -1,0 +1,23 @@
+.wrap { width: 100%; }
+
+.svgContainer {
+  width: 100%;
+  border: 2.5px solid #0a0a0a;
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.15);
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hint {
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  color: rgba(255,255,255,.4);
+  text-align: center;
+  margin-top: .8rem;
+}

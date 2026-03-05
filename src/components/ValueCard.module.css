@@ -1,0 +1,94 @@
+/* ── CARD — fixed height, no expand ── */
+.card {
+  display: flex; flex-direction: column; align-items: flex-start;
+  gap: .5rem; padding: 1.6rem;
+  border: var(--border); box-shadow: var(--shadow);
+  background: var(--white); text-align: left;
+  cursor: pointer; width: 100%;
+  transition: transform .12s, box-shadow .12s;
+  height: 100%;
+}
+.card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-yellow);
+}
+
+.emoji   { font-size: 2rem; }
+.title   { font-family: var(--font-display); font-size: 1.05rem; letter-spacing: .04em; color: var(--black); }
+.summary { font-size: .78rem; color: var(--muted); line-height: 1.55; flex: 1; }
+.readMore {
+  font-family: var(--font-mono); font-size: .62rem; font-weight: 700;
+  color: var(--black); letter-spacing: .06em;
+  border-bottom: 2px solid var(--yellow); padding-bottom: 1px;
+}
+
+/* ── BACKDROP ── */
+.backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 200;
+  backdrop-filter: blur(2px);
+}
+
+/* ── MODAL CENTERING WRAPPER ── */
+/* Use a flex container on top of the backdrop so centering is handled
+   by the browser layout engine, not by transform math fighting Framer */
+.modalWrapper {
+  position: fixed; inset: 0;
+  z-index: 201;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  /* allow wrapper itself to scroll on very small screens */
+  overflow-y: auto;
+}
+
+/* ── MODAL PANEL ── */
+.modal {
+  width: min(560px, 100%);
+  background: var(--white);
+  border: var(--border);
+  box-shadow: 8px 8px 0 var(--black);
+  overflow: hidden;
+  /* don't grow taller than viewport; let body scroll inside */
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 2rem);
+}
+
+.modalHeader {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem 1.6rem;
+  background: var(--black); border-bottom: var(--border);
+  flex-shrink: 0;
+}
+.modalTitle {
+  font-family: var(--font-display); font-size: 1.3rem;
+  color: var(--yellow); letter-spacing: .04em;
+  display: flex; align-items: center; gap: .6rem;
+}
+.close {
+  background: none; border: 2px solid rgba(255,255,255,.3);
+  color: var(--white); cursor: pointer;
+  font-size: .85rem; font-weight: 700;
+  width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+  transition: border-color .12s;
+  flex-shrink: 0;
+}
+.close:hover { border-color: var(--yellow); color: var(--yellow); }
+
+.modalBody {
+  padding: 1.6rem;
+  display: flex; flex-direction: column; gap: 1.2rem;
+  overflow-y: auto;   /* scroll happens inside the panel, not the viewport */
+  flex: 1;
+}
+
+.row { display: flex; flex-direction: column; gap: .4rem; }
+.rowLabel {
+  font-family: var(--font-mono); font-size: .65rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.row p { font-size: .86rem; line-height: 1.75; color: var(--text); }
+.row strong { color: var(--black); }

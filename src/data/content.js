@@ -5,14 +5,14 @@ import { awardImages, hldDiagrams, certificateImages } from "./imageMap";
 
 export const personal = {
   name: 'Tanzeem Alam',
-  role: 'Java Software Engineer',
-  tagline: 'Full-Stack Java & Cloud · 6.8 Years',
+  role: 'Associate Technical Lead',
+  tagline: 'Full-Stack Java & Cloud · 7.4 Years',
   location: 'Delhi, India',
   email: 'tanzeemalam789@gmail.com',
   github: 'https://github.com/TanzeemAlam',
   linkedin: 'https://linkedin.com/in/tanzeem-alam/',
   leetcode: 'https://leetcode.com/u/TanzeemAlam',
-  bio: 'Building scalable, cloud-native systems with Java microservices and Spring Boot. Engineering lead who ships production-ready solutions, mentors teams, and owns outcomes end-to-end.',
+  bio: 'Leading backend engineering and delivery for Tata Play LIT, a 50+ microservice Live Internet TV platform. Driving technical execution, production releases, incident resolution, and engineering quality while coordinating 10+ engineers. Building scalable, cloud-native systems with Java 21, Spring Boot, and AWS.',
 }
 
 /* ── SKILLS ── */
@@ -24,9 +24,9 @@ export const skillCategories = [
     bg: '#fffbeb',
     icon: '☕',
     skills: [
-      { name: 'Java 17',         years: 6, level: 95, projects: ['Ecommerce Platform', 'Payment Gateway', 'RFP Automation'] },
-      { name: 'Spring Boot',     years: 6, level: 92, projects: ['Ecommerce Platform', 'Payment Gateway'] },
-      { name: 'Spring MVC',      years: 5, level: 88, projects: ['Legacy Monolith', 'Internal Tools'] },
+      { name: 'Java 21',         years: 7, level: 95, projects: ['Ecommerce Platform', 'Payment Gateway', 'RFP Automation'] },
+      { name: 'Spring Boot',     years: 7, level: 92, projects: ['Ecommerce Platform', 'Payment Gateway'] },
+      { name: 'Spring MVC',      years: 6, level: 88, projects: ['Legacy Monolith', 'Internal Tools'] },
       { name: 'Spring Security', years: 5, level: 85, projects: ['Ecommerce Platform', 'OAuth2 Integration'] },
       { name: 'Spring JPA',      years: 5, level: 88, projects: ['Ecommerce Platform', 'Payment Gateway'] },
       { name: 'Multithreading',  years: 4, level: 80, projects: ['Inventory Service', 'Batch Jobs'] },
@@ -79,6 +79,7 @@ export const skillCategories = [
       { name: 'Event-Driven',  years: 4, level: 85, projects: ['Ecommerce Platform', 'Inventory System'] },
       { name: 'System Design', years: 5, level: 82, projects: ['Tech Interviews', 'Arch Reviews'] },
       { name: 'HLD / LLD',     years: 4, level: 80, projects: ['Ecommerce Platform', 'Payment Gateway'] },
+      { name: 'Hazelcast',     years: 1, level: 70, projects: ['Caching Layer'] },
       { name: 'MySQL',         years: 6, level: 88, projects: ['All Projects'] },
       { name: 'PostgreSQL',    years: 3, level: 82, projects: ['Ecommerce Platform'] },
       { name: 'MongoDB',       years: 2, level: 75, projects: ['Internal Tools'] },
@@ -154,6 +155,23 @@ export const values = [
 export const experience = [
   {
     id: 'exp1',
+    role: 'Associate Technical Lead',
+    company: 'ToTheNew',
+    location: 'Greater Noida',
+    period: 'March 2026 – Present',
+    tags: ['Java 21', 'Spring Boot', 'Microservices', 'AWS', 'Docker', 'K8s', 'Jenkins', 'MySQL', 'MongoDB', 'Hazelcast'],
+    points: [
+      'Leading back-end delivery for Tata-Play LIT, a 50+ micro-service Live Internet TV platform within the Tata-Play ecosystem, while coordinating a team of 10+ engineers across daily stand-ups, work allocation, prioritization, and delivery in a fast-paced, non-sprint environment.',
+      'Owning the end-to-end release life-cycle, including weekly production deployments, Jenkins-based UAT deployments, Stage validation, and Production (Master) releases, ensuring cross-team readiness and smooth software delivery.',
+      'Leading Root Cause Analysis (RCA) for production incidents, driving timely issue resolution, and delivering critical bug fixes, enhancements, and new features across multiple parallel work-streams.',
+      'Improving engineering quality through code reviews, adherence to coding standards, and back-end development using Java 21, Spring Boot 3.5, Kafka, RabbitMQ, and Amazon SQS.',
+      'Building scalable, resilient back-end services using MySQL, MongoDB, Redis, and Hazelcast, while improving API performance through load testing and back-end optimizations.',
+      'Collaborating with architects and product teams on back-end solution design, release planning, and the implementation of scalable platform capabilities.',
+    ],
+    allTags: ['Java 21', 'Spring Boot', 'Microservices', 'AWS', 'Docker', 'Kubernetes', 'Jenkins', 'MySQL', 'MongoDB', 'Hazelcast', 'Kafka', 'RabbitMQ', 'Redis'],
+  },
+  {
+    id: 'exp2',
     role: 'Staff Software Engineer',
     company: 'Nagarro',
     location: 'Gurugram',
@@ -170,7 +188,7 @@ export const experience = [
     allTags: ['Java 17', 'Spring Boot', 'Microservices', 'Jenkins', 'AWS', 'CloudWatch', 'Docker', 'Kubernetes', 'GitHub Copilot', 'Agile'],
   },
   {
-    id: 'exp2',
+    id: 'exp3',
     role: 'Senior Software Engineer',
     company: 'Nagarro',
     location: 'Gurugram',
@@ -187,7 +205,7 @@ export const experience = [
     allTags: ['React.js', 'TypeScript', 'Spring Boot', 'Kafka', 'OAuth2', 'JWT', 'AWS', 'Azure', 'PayPal API', 'PostgreSQL'],
   },
   {
-    id: 'exp3',
+    id: 'exp4',
     role: 'Software Engineer',
     company: 'Nagarro',
     location: 'Gurugram',
